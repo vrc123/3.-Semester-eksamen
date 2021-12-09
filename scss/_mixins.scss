@@ -1,0 +1,21 @@
+@mixin flex_center {
+    display: $flex;
+    justify-content: $align_center;
+}
+
+@mixin flex_column {
+    display: $flex;
+    flex-direction: $align_column;
+}
+
+@mixin background_image {
+    background-image: url("img/forrest.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+@mixin form_responsiv {
+    width: $size+100%;
+    border-radius: $size;
+}

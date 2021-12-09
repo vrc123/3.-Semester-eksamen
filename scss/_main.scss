@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+    margin: $size;
+    padding: $size;
+    font-family: Helvetica, Arial, sans-serif;
+    body {
+        @include flex_center;
+        height: $size+100vh;
+        align-items: $align_center;
+        @include background_image;
+        a {
+            font-weight: $bold;
+            color: $green;
+            &:hover {
+                color: darken($green, $size+10%);
+            }
+        }
+    }
+}
+
+.form_heading {
+    @include flex_center;
+    margin-bottom: $size_m_p*2;
+}
+
+label {
+    font-size: $p_size;
+    font-weight: $bold;
+}
+
+form input {
+    padding: $size+5px;
+    font-size: $p_size;
+}
+
+.submit_button {
+    @include flex_center;
+}
+
+.submit_button input {
+    height: $size+50px;
+    width: $size+150px;
+    margin-top: $size_m_p;
+    margin-bottom: $size_m_p*2;
+    border: none;
+    border-radius: $size+25px;
+    font-weight: $bold;
+    color: $white;
+    background-color: $green;
+    cursor: pointer;
+    &:hover {
+        background-color: darken($green, $size+10%);
+    }
+}
+
+.form_link_text {
+    @include flex_center;
+    font-weight: $bold;
+    padding-top: $size_m_p;
+}
+
+/* Styling sign up page */
+.signup_container {
+    @include flex_center;
+    align-items: $align_center;
+    min-height: $size+945px;
+    @include background_image;
+    .signup_form {
+        @include flex_column;
+        width: $size+500px;
+        padding: $size+50px;
+        border-radius: $size+25px;
+        background-color: $white;
+        .warning {
+            margin-bottom: $size_m_p;
+            color: $red;
+        }
+    }
+}
+
+/* Styling login page */
+.login_form {
+    @include flex_column;
+    width: $size+500px;
+    padding: $size+50px;
+    border-radius: $size+25px;
+    background-color: $white;
+    .input {
+        margin-bottom: $size_m_p;
+    }
+}
+
+/* Styling welcome page */
+.welcome_container {
+    @include flex_column;
+    width: $size+500px;
+    padding: $size+50px;
+    border-radius: $size+25px;
+    background-color: $white;
+    .welcome_heading {
+        text-align: $align_center;
+        margin-bottom: $size_m_p*2;
+    }
+    .welcome_link_text {
+        @include flex_center;
+        font-weight: $bold;
+    }
+}
+
+/* Styling game page*/
+.game_container {
+    @include flex_center;
+    align-items: $align_center;
+    height: $size+100%;
+    padding-top: $size+150px;
+    @include background_image;
+    .game {
+        @include flex_column;
+        padding: $size+50px;
+        border-radius: $size+25px;
+        background-color: $white;
+        .heading {
+            @include flex_center;
+            margin-bottom: $size_m_p*2;
+        }
+        #message {
+            padding-bottom: $size_m_p;
+            text-align: $align_center;
+            font-weight: $bold;
+            font-size: $p_size;
+        }
+        .game_link_text {
+            @include flex_center;
+            padding-top: $size_m_p;
+            font-weight: $bold;
+        }
+    }
+}
+
+@media only screen and (max-width: ($size+501px)) {
+    body {
+        background-image: $url;
+    }
+
+    .form_heading {
+        justify-content: $align_start;
+    }
+
+    .submit_button {
+        justify-content: $align_start;
+    }
+
+    .form_link_text {
+        justify-content: $align_start;
+    }
+
+    /* Styling sign up page */
+    .signup_container {
+        background-image: $url;
+        .signup_form {
+            @include form_responsiv;
+            .login_input {
+                margin-bottom: $size_m_p*2;
+            }
+            .warning {
+                margin-bottom: $size_m_p;
+                color: $red;
+            }
+        }
+    }
+
+    /* Styling login page */
+    .login_form {
+        @include form_responsiv;
+    }
+
+    /* Styling welcome page */
+    .welcome_container {
+        @include form_responsiv;
+        .welcome_heading {
+            text-align: $align_start_text;
+        }
+        .welcome_link_text {
+            justify-content: $align_start;
+        }
+    }
+
+    /* Styling game page*/
+    .game_container {
+        background-image: $url;
+        .game {
+            @include form_responsiv;
+            .heading {
+                justify-content: $align_start;
+            }
+            .game_link_text {
+                justify-content: $align_start;
+            }
+        }
+    }
+}
+
+@media only screen and (max-height: ($size+874px)) {
+    /* Styling game page*/
+    .game_container {
+        padding-top: $size+100px;
+    }
+}
+
+@media only screen and (max-height: ($size+801px)) {
+    /* Styling game page*/
+    .game_container {
+        padding-top: $size+100px;
+    }
+}

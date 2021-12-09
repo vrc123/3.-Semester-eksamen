@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif; }
+  * body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-image: url("img/forrest.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat; }
+    * body a {
+      font-weight: bold;
+      color: #337d2f; }
+      * body a:hover {
+        color: #245821; }
+
+.form_heading {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; }
+
+label {
+  font-size: 16px;
+  font-weight: bold; }
+
+form input {
+  padding: 5px;
+  font-size: 16px; }
+
+.submit_button {
+  display: flex;
+  justify-content: center; }
+
+.submit_button input {
+  height: 50px;
+  width: 150px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #337d2f;
+  cursor: pointer; }
+  .submit_button input:hover {
+    background-color: #245821; }
+
+.form_link_text {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  padding-top: 10px; }
+
+/* Styling sign up page */
+.signup_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 945px;
+  background-image: url("img/forrest.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat; }
+  .signup_container .signup_form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 50px;
+    border-radius: 25px;
+    background-color: #ffffff; }
+    .signup_container .signup_form .warning {
+      margin-bottom: 10px;
+      color: #ff0000; }
+
+/* Styling login page */
+.login_form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding: 50px;
+  border-radius: 25px;
+  background-color: #ffffff; }
+  .login_form .input {
+    margin-bottom: 10px; }
+
+/* Styling welcome page */
+.welcome_container {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding: 50px;
+  border-radius: 25px;
+  background-color: #ffffff; }
+  .welcome_container .welcome_heading {
+    text-align: center;
+    margin-bottom: 20px; }
+  .welcome_container .welcome_link_text {
+    display: flex;
+    justify-content: center;
+    font-weight: bold; }
+
+/* Styling game page*/
+.game_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: 150px;
+  background-image: url("img/forrest.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat; }
+  .game_container .game {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 25px;
+    background-color: #ffffff; }
+    .game_container .game .heading {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px; }
+    .game_container .game #message {
+      padding-bottom: 10px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px; }
+    .game_container .game .game_link_text {
+      display: flex;
+      justify-content: center;
+      padding-top: 10px;
+      font-weight: bold; }
+
+@media only screen and (max-width: 501px) {
+  body {
+    background-image: url(""); }
+
+  .form_heading {
+    justify-content: flex-start; }
+
+  .submit_button {
+    justify-content: flex-start; }
+
+  .form_link_text {
+    justify-content: flex-start; }
+
+  /* Styling sign up page */
+  .signup_container {
+    background-image: url(""); }
+    .signup_container .signup_form {
+      width: 100%;
+      border-radius: 0; }
+      .signup_container .signup_form .login_input {
+        margin-bottom: 20px; }
+      .signup_container .signup_form .warning {
+        margin-bottom: 10px;
+        color: #ff0000; }
+
+  /* Styling login page */
+  .login_form {
+    width: 100%;
+    border-radius: 0; }
+
+  /* Styling welcome page */
+  .welcome_container {
+    width: 100%;
+    border-radius: 0; }
+    .welcome_container .welcome_heading {
+      text-align: start; }
+    .welcome_container .welcome_link_text {
+      justify-content: flex-start; }
+
+  /* Styling game page*/
+  .game_container {
+    background-image: url(""); }
+    .game_container .game {
+      width: 100%;
+      border-radius: 0; }
+      .game_container .game .heading {
+        justify-content: flex-start; }
+      .game_container .game .game_link_text {
+        justify-content: flex-start; } }
+@media only screen and (max-height: 874px) {
+  /* Styling game page*/
+  .game_container {
+    padding-top: 100px; } }
+@media only screen and (max-height: 801px) {
+  /* Styling game page*/
+  .game_container {
+    padding-top: 100px; } }
